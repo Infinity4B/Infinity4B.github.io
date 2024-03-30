@@ -76,16 +76,16 @@ export default defineNuxtConfig({
     }
   },
 
-  generate: {
-    nojekyll: true, //not working on this version
-  },
-  ssr: true, //server side rendered enabled //When true
-  target: "static", // and static, nuxt generates a hybrid static sit
+  // generate: {
+  //   nojekyll: true, //not working on this version
+  // },
+  // ssr: true, //server side rendered enabled //When true
+  // target: "static", // and static, nuxt generates a hybrid static sit
 
-  nitro: {
-    prerender: {
-      // Workaround for "Error: [404] Page not found: /manifest.json"
-      failOnError: false,
-    },
-  },
+  // nitro: {
+  //   prerender: {
+  //     // Workaround for "Error: [404] Page not found: /manifest.json"
+  //     failOnError: false,
+  //   },
+  // },
 })
