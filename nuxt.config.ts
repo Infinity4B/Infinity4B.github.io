@@ -80,4 +80,11 @@ export default defineNuxtConfig({
   },
   ssr: true, //server side rendered enabled //When true
   target: "static", // and static, nuxt generates a hybrid static sit
+
+  nitro: {
+    prerender: {
+      // Workaround for "Error: [404] Page not found: /manifest.json"
+      failOnError: false,
+    },
+  },
 })
