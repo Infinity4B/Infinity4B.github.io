@@ -15,8 +15,8 @@ export default defineNuxtConfig({
       ],
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     },
-    baseURL: "/Infinity4B.github.io/",
-    buildAssetsDir: "/static/"
+    // baseURL: "/Infinity4B.github.io/",
+    // buildAssetsDir: "/static/"
   },
 
   // css
