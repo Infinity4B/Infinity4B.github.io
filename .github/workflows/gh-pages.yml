@@ -31,13 +31,13 @@ jobs:
         with:
           node-version: lts/*
 
-      - name: Generate
-        run: pnpm generate
+      - name: Build
+        run: pnpm build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: .output/public
+          path: dist
 
   deploy:
     environment:
