@@ -17,7 +17,8 @@
     "preview": "nuxi preview",
     "start": "node .output/server/index.mjs",
     "generate": "nuxi generate",
-    "postinstall": "nuxi prepare"
+    "postinstall": "nuxi prepare",
+    "deploy":"gh-pages --dotfiles -d .output/public"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
