@@ -35,7 +35,8 @@
     "gh-pages": "^6.1.1",
     "nuxt": "^3.8.2",
     "sass": "^1.69.5",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "@popperjs/core": "npm:@sxzz/popperjs-es@^2.11.7"
   },
   "peerDependencies": {
     "pinia": "^2.1.6"
