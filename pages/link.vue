@@ -6,7 +6,7 @@ const { data } = await useFetch('/notion',
   {
     method: 'POST',
     headers: {
-      "Authorization": config.apiSecret,
+      "Authorization": config.public.apiBase,
       "Notion-Version": "2022-06-28"
     }
   })
