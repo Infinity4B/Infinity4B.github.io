@@ -6,7 +6,7 @@ const hpending = ref(true)
 
 const showHistory = async () => {
     expand.value = true
-    const { data, pending } = await useFetch('/history', { method: 'GET', server: true })
+    const { data, pending } = await useFetch('https://api.oick.cn/api/lishi/', { method: 'GET'})
     hdata.value = data.value
     hpending.value = pending.value
 }

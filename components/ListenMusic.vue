@@ -8,7 +8,7 @@ const props = defineProps({
 const {api} = props
 
 const getSongList = async (api: string) => {
-    const { data, pending, error, refresh } = await useFetch(api, { method: 'GET', server: true })
+    const { data, pending, error, refresh } = await useFetch(api, { method: 'GET'})
     return data
 }
 

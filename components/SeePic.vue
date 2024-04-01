@@ -14,7 +14,7 @@ const ppending = ref(true)
 
 const showPic = async () => {
     expand.value = true
-    const { data, pending } = await useFetch(api, { method: 'GET', server: true })
+    const { data, pending } = await useFetch(api, { method: 'GET'})
     pdata.value = data.value
     ppending.value = pending.value
 }
