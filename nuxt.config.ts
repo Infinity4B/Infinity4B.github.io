@@ -82,10 +82,24 @@ export default defineNuxtConfig({
   // ssr: true, //server side rendered enabled //When true
   // target: "static", // and static, nuxt generates a hybrid static sit
 
-  // nitro: {
-  //   prerender: {
-  //     // Workaround for "Error: [404] Page not found: /manifest.json"
-  //     failOnError: false,
-  //   },
-  // },
+  nitro: {
+    prerender: {
+      // Workaround for "Error: [404] Page not found: /manifest.json"
+      failOnError: false,
+    },
+    routeRules: {
+      '/pic/**': {
+        proxy: 'http://shibe.online/api/**'
+      },
+      '/listen/**': {
+        proxy: 'https://api.injahow.cn/meting/**'
+      },
+      '/history/**': {
+        proxy: 'https://api.oick.cn/api/lishi/**'
+      },
+      '/hitokoto/**': {
+        proxy: 'https://v1.hitokoto.cn/**'
+      },
+    }
+  }
 })

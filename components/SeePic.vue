@@ -6,7 +6,7 @@ const props = defineProps({
     },
 })
 const {api} = props
-const {data, error, execute, refresh, pending } = await useFetch(api)
+const { data, error, execute, refresh, pending } = await useFetch(api, { method: 'GET', server: true })
 </script>
 
 <template>
