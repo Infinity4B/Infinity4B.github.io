@@ -2,7 +2,7 @@
 const config = useRuntimeConfig()
 import { ref } from 'vue'
 const loading = ref(true)
-const { data } = await useFetch('https://api.notion.com/v1/databases/ee0381b0e0db4e54832bf59b2999a8b3/query',
+const { data } = await useFetch('/notion',
   {
     method: 'POST',
     headers: {
