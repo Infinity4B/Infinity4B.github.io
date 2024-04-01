@@ -9,8 +9,8 @@ const sendMsg = (data) => {
     })
 }
 
-const apiMessage = async (category : string) => {
-    const { data, pending } = await useFetch('/hitokoto/', { method: 'GET', query: { c:'category'}})
+const apiMessage = async (api : string) => {
+    const { data, pending } = await useFetch(api, { method: 'GET'})
     if (data.value.from_who){
         sendMsg('“'+data.value.hitokoto + "”——《" + data.value.from + '》' + data.value.from_who)
     }
@@ -41,22 +41,22 @@ const handlePicClick = (tab: TabsPaneContext, event: Event) => {
                     <div><el-text size="large" tag="b">手气不错</el-text></div>
                     <br>
                     <br>
-                    <el-button plain @click="apiMessage('k')">哲学</el-button>
+                    <el-button plain @click="apiMessage('https://v1.hitokoto.cn/?c=k')">哲学</el-button>
                     <br>
                     <br>
-                    <el-button plain @click="apiMessage('c')">游戏</el-button>
+                    <el-button plain @click="apiMessage('https://v1.hitokoto.cn/?c=c')">游戏</el-button>
                     <br>
                     <br>
-                    <el-button plain @click="apiMessage('d')">文学</el-button>
+                    <el-button plain @click="apiMessage('https://v1.hitokoto.cn/?c=d')">文学</el-button>
                     <br>
                     <br>
-                    <el-button plain @click="apiMessage('h')">影视</el-button>
+                    <el-button plain @click="apiMessage('https://v1.hitokoto.cn/?c=h')">影视</el-button>
                     <br>
                     <br>
-                    <el-button plain @click="apiMessage('i')">诗词</el-button>
+                    <el-button plain @click="apiMessage('https://v1.hitokoto.cn/?c=i')">诗词</el-button>
                     <br>
                     <br>
-                    <el-button plain @click="apiMessage('j')">网易云</el-button>
+                    <el-button plain @click="apiMessage('https://v1.hitokoto.cn/?c=j')">网易云</el-button>
                 </div>
             </el-aside>
             <el-main>
