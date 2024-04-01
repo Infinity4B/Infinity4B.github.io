@@ -78,13 +78,13 @@ const handlePicClick = (tab: TabsPaneContext, event: Event) => {
                     <el-tabs v-model="activePicName" class="listen" @tab-click="handlePicClick">
                         <template #header>看看动物</template>
                         <el-tab-pane label="看看猫" name="cat_tab">
-                            <SeePic api="http://shibe.online/api/cats"></SeePic>
+                            <SeePic api="https://shibe.online/api/cats"></SeePic>
                         </el-tab-pane>
                         <el-tab-pane label="看看狗" name="dog_tab">
-                            <SeePic api="http://shibe.online/api/shibes"></SeePic>
+                            <SeePic api="https://shibe.online/api/shibes"></SeePic>
                         </el-tab-pane>
                         <el-tab-pane label="看看鸟" name="bird_tab">
-                            <SeePic api="http://shibe.online/api/birds"></SeePic>
+                            <SeePic api="https://shibe.online/api/birds"></SeePic>
                         </el-tab-pane>
                     </el-tabs>
                 </el-card>
@@ -95,16 +95,16 @@ const handlePicClick = (tab: TabsPaneContext, event: Event) => {
                     <template #header>随便听听</template>
                     <el-tabs v-model="activeListenName" class="listen" @tab-click="handleListenClick">
                         <el-tab-pane label="英文" name="en_songs_tab">
-                            <ListenMusic api="https://api.injahow.cn/meting/?type=playlist&id=73591222" />
+                            <ListenMusic api="/listen/?type=playlist&id=73591222" />
                         </el-tab-pane>
                         <el-tab-pane label="中文" name="cn_songs_tab">
-                            <ListenMusic api="https://api.injahow.cn/meting/?type=playlist&id=950016701" />
+                            <ListenMusic api="/listen/?type=playlist&id=950016701" />
                         </el-tab-pane>
                         <el-tab-pane label="日文" name="jp_songs_tab">
-                            <ListenMusic api="https://api.injahow.cn/meting/?type=playlist&id=3114055720" />
+                            <ListenMusic api="/listen/?type=playlist&id=3114055720" />
                         </el-tab-pane>
                         <el-tab-pane label="纯音乐" name="pure_songs_tab">
-                            <ListenMusic api="https://api.injahow.cn/meting/?type=playlist&id=950022539" />
+                            <ListenMusic api="/listen/?type=playlist&id=950022539" />
                         </el-tab-pane>
                         <el-tab-pane label="最喜欢" name="mix_songs_tab">
                             <ListenMusic api="https://api.injahow.cn/meting/?type=playlist&id=9282724009" />
