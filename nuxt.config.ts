@@ -16,7 +16,7 @@ export default defineNuxtConfig({
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     },
     // baseURL: "/Infinity4B.github.io/",
-    // buildAssetsDir: "/static/"
+    buildAssetsDir: "/static/"
   },
 
   // css
@@ -76,11 +76,11 @@ export default defineNuxtConfig({
     }
   },
 
-  // generate: {
-  //   nojekyll: true, //not working on this version
-  // },
-  // ssr: true, //server side rendered enabled //When true
-  // target: "static", // and static, nuxt generates a hybrid static sit
+  generate: {
+    nojekyll: true, //not working on this version
+  },
+  ssr: true, //server side rendered enabled //When true
+  target: "static", // and static, nuxt generates a hybrid static sit
 
   nitro: {
     prerender: {
