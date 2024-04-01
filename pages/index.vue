@@ -10,7 +10,7 @@ const sendMsg = (data) => {
 }
 
 const apiMessage = async (api : string) => {
-    const { data, pending, error, refresh } = await useFetch(api, { method: 'GET'})
+    const { data, pending, error, refresh } = await useFetch(api, { method: 'GET', server:false})
     if (data.value.from_who){
         sendMsg('“'+data.value.hitokoto + "”——《" + data.value.from + '》' + data.value.from_who)
     }
