@@ -41,22 +41,22 @@ const handlePicClick = (tab: TabsPaneContext, event: Event) => {
                     <div><el-text size="large" tag="b">手气不错</el-text></div>
                     <br>
                     <br>
-                    <el-button plain @click="apiMessage('https://v1.hitokoto.cn/?c=k')">哲学</el-button>
+                    <el-button plain @click="apiMessage('/hitokoto/?c=k')">哲学</el-button>
                     <br>
                     <br>
-                    <el-button plain @click="apiMessage('https://v1.hitokoto.cn/?c=c')">游戏</el-button>
+                    <el-button plain @click="apiMessage('/hitokoto/?c=c')">游戏</el-button>
                     <br>
                     <br>
-                    <el-button plain @click="apiMessage('https://v1.hitokoto.cn/?c=d')">文学</el-button>
+                    <el-button plain @click="apiMessage('/hitokoto/?c=d')">文学</el-button>
                     <br>
                     <br>
-                    <el-button plain @click="apiMessage('https://v1.hitokoto.cn/?c=h')">影视</el-button>
+                    <el-button plain @click="apiMessage('/hitokoto/?c=h')">影视</el-button>
                     <br>
                     <br>
-                    <el-button plain @click="apiMessage('https://v1.hitokoto.cn/?c=i')">诗词</el-button>
+                    <el-button plain @click="apiMessage('/hitokoto/?c=i')">诗词</el-button>
                     <br>
                     <br>
-                    <el-button plain @click="apiMessage('https://v1.hitokoto.cn/?c=j')">网易云</el-button>
+                    <el-button plain @click="apiMessage('/hitokoto/?c=j')">网易云</el-button>
                 </div>
             </el-aside>
             <el-main>
