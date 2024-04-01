@@ -100,6 +100,9 @@ export default defineNuxtConfig({
       '/hitokoto/**': {
         proxy: 'https://v1.hitokoto.cn/**'
       },
+      '/notion/**': {
+        proxy: 'https://api.notion.com/v1/databases/ee0381b0e0db4e54832bf59b2999a8b3/query'
+      }
     }
   }
 })

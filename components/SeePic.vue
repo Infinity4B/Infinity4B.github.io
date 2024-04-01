@@ -6,13 +6,30 @@ const props = defineProps({
     },
 })
 const {api} = props
-const { data, error, execute, refresh, pending } = await useFetch(api, { method: 'GET', server: true })
+
+const expand = ref(false)
+
+const pdata = ref()
+const ppending = ref(true)
+
+const showPic = async () => {
+    expand.value = true
+    const { data, pending } = await useFetch(api, { method: 'GET', server: true })
+    pdata.value = data.value
+    ppending.value = pending.value
+}
+
 </script>
 
 <template>
     <div>
-        <NuxtImg :src="data[0]"/>
+        <div v-if="ppending">
+
+        </div>
+        <div v-else>
+            <NuxtImg fit="cover" :src="pdata[0]" width="500" height="500" />
+        </div>
         <br>
-        <el-button plain @click="refresh">换一张</el-button>
+        <el-button plain @click="showPic" style="width: 60px">看看</el-button>
     </div>
 </template>
