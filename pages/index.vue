@@ -60,21 +60,21 @@ const handlePicClick = (tab: TabsPaneContext, event: Event) => {
                 </div>
             </el-aside>
             <el-main>
-                <el-card style="max-width: 550px">
+                <el-card style="max-width: 100%">
                     <template #header>历史上的今天</template>
                     <HistoryToday />
                 </el-card>
 
                 <br>
 
-                <el-card style="max-width: 550px">
+                <el-card style="max-width: 100%">
                     <template #header>喝点什么</template>
                     <What2Drink />
                 </el-card>
 
                 <br>
 
-                <el-card style="max-width: 550px">
+                <el-card style="max-width: 100%">
                     <el-tabs v-model="activePicName" class="listen" @tab-click="handlePicClick">
                         <template #header>看看动物</template>
                         <el-tab-pane label="看看猫" name="cat_tab">
@@ -91,7 +91,7 @@ const handlePicClick = (tab: TabsPaneContext, event: Event) => {
 
                 <br>
 
-                <el-card style="max-width: 550px">
+                <el-card style="max-width: 100%">
                     <template #header>随便听听</template>
                     <el-tabs v-model="activeListenName" class="listen" @tab-click="handleListenClick">
                         <el-tab-pane label="英文" name="en_songs_tab">
