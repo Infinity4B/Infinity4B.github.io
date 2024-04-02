@@ -29,7 +29,7 @@ const getWhat2Drink = () => {
 <template>
     <client-only>
         <el-select-v2 v-model="drinkList" :options="options" placeholder="请选择，没有的可以自己输入"
-            style="width: 400px; margin-right: 16px; vertical-align: middle" allow-create filterable multiple clearable
+            style="width: 100%; margin-right: 16px; vertical-align: middle" allow-create filterable multiple clearable
             :reserve-keyword="false" />
     </client-only>
     <el-button plain @click="getWhat2Drink()">喝什么</el-button>
