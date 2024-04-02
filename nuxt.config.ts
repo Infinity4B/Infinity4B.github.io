@@ -88,6 +88,7 @@ export default defineNuxtConfig({
       failOnError: false,
     },
     routeRules: {
+      '/*':{cors:true},
       // '/pic/**': {
       //   proxy: 'http://shibe.online/api/**'
       // },
