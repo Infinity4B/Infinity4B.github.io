@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>INFINITY4B</title>
+  <meta name="description" content="INFINITY4B — enter the grid.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='black'/><text x='16' y='23' font-family='monospace' font-weight='bold' font-size='15' fill='%2300ff66' text-anchor='middle'>4B</text></svg>">
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
+  </script>
+</head>
+<body>
+  <canvas id="rain"></canvas>
+  <canvas id="scene"></canvas>
+
+  <div class="overlay scanlines"></div>
+  <div class="overlay vignette"></div>
+
+  <header class="hud hud-tl">[ INFINITY4B ]<span class="cursor">&#9610;</span></header>
+  <div class="hud hud-tr">MATRIX//NODE.4B</div>
+  <div class="hud hud-bl" id="terminal"></div>
+  <div class="hud hud-br" id="status">SYS.BOOT&hellip;</div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

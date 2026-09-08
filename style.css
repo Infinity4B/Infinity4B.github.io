@@ -1,0 +1,67 @@
+:root {
+  --green: #00ff66;
+  --green-dim: #0a4f28;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+  color: var(--green);
+  font-family: "SF Mono", "Fira Code", Consolas, "Courier New", monospace;
+  cursor: crosshair;
+}
+
+canvas { position: fixed; inset: 0; width: 100%; height: 100%; display: block; }
+#rain  { z-index: 0; opacity: 0.55; }
+#scene { z-index: 1; }
+
+.overlay { position: fixed; inset: 0; pointer-events: none; }
+
+.scanlines {
+  z-index: 2;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0px,
+    rgba(0, 0, 0, 0) 2px,
+    rgba(0, 20, 8, 0.28) 3px,
+    rgba(0, 0, 0, 0) 4px
+  );
+  mix-blend-mode: multiply;
+}
+
+.vignette {
+  z-index: 3;
+  background: radial-gradient(ellipse at center, transparent 55%, rgba(0, 0, 0, 0.75) 100%);
+}
+
+.hud {
+  position: fixed;
+  z-index: 4;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-shadow: 0 0 6px rgba(0, 255, 102, 0.8);
+  pointer-events: none;
+  user-select: none;
+  white-space: pre;
+}
+
+.hud-tl { top: 18px; left: 20px; font-size: 14px; }
+.hud-tr { top: 18px; right: 20px; color: var(--green-dim); text-shadow: none; }
+.hud-bl { bottom: 18px; left: 20px; line-height: 1.7; color: rgba(0, 255, 102, 0.75); }
+.hud-br { bottom: 18px; right: 20px; color: rgba(0, 255, 102, 0.6); }
+
+.cursor {
+  display: inline-block;
+  margin-left: 6px;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink { 50% { opacity: 0; } }
+
+@media (max-width: 640px) {
+  .hud-tr, .hud-br { display: none; }
+  .hud-bl { font-size: 10px; }
+}
